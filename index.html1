@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Capabilities</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .capability-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .capability-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .icon-wrapper {
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #2d3748;
+        }
+
+        .card-description {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+
+        .card-link::after {
+            content: '→';
+            margin-left: 8px;
+            transition: margin-left 0.3s ease;
+        }
+
+        .capability-card:hover .card-link::after {
+            margin-left: 12px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .status-active {
+            background: #c6f6d5;
+            color: #22543d;
+        }
+
+        .status-beta {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .capabilities-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .genai { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .agentic { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+        .mlops { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+        .data { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+        .nlp { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+        .vision { background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Team Capabilities</h1>
+            <p class="subtitle">Explore our AI & ML engineering capabilities</p>
+        </header>
+
+        <div class="capabilities-grid">
+            <!-- GenAI Frameworks -->
+            <a href="https://your-confluence-url/genai-frameworks" class="capability-card" target="_blank">
+                <div class="icon-wrapper genai">🧠</div>
+                <span class="status-badge status-active">Active</span>
+                <h2 class="card-title">GenAI Frameworks</h2>
+                <p class="card-description">
+                    Comprehensive frameworks for building generative AI applications including LangChain, LlamaIndex, and custom solutions for RAG pipelines.
+                </p>
+                <span class="card-link">View Full Documentation</span>
+            </a>
+
+            <!-- Agentic Systems -->
+            <a href="https://your-confluence-url/agentic-systems" class="capability-card" target="_blank">
+                <div class="icon-wrapper agentic">🤖</div>
+                <span class="status-badge status-active">Active</span>
+                <h2 class="card-title">Agentic AI Systems</h2>
+                <p class="card-description">
+                    Autonomous AI agents capable of planning, reasoning, and executing complex tasks with minimal human intervention using ReAct and other patterns.
+                </p>
+                <span class="card-link">View Full Documentation</span>
+            </a>
+
+            <!-- ML Operations -->
+            <a href="https://your-confluence-url/mlops" class="capability-card" target="_blank">
+                <div class="icon-wrapper mlops">⚙️</div>
+                <span class="status-badge status-active">Active</span>
+                <h2 class="card-title">ML Operations</h2>
+                <p class="card-description">
+                    End-to-end ML pipeline management, model deployment, monitoring, and scaling infrastructure for production AI systems.
+                </p>
+                <span class="card-link">View Full Documentation</span>
+            </a>
+
+            <!-- Data Engineering -->
+            <a href="https://your-confluence-url/data-engineering" class="capability-card" target="_blank">
+                <div class="icon-wrapper data">📊</div>
+                <span class="status-badge status-active">Active</span>
+                <h2 class="card-title">Data Engineering</h2>
+                <p class="card-description">
+                    Scalable data pipelines, ETL processes, and data infrastructure for AI/ML workloads with real-time processing capabilities.
+                </p>
+                <span class="card-link">View Full Documentation</span>
+            </a>
+
+            <!-- NLP Solutions -->
+            <a href="https://your-confluence-url/nlp" class="capability-card" target="_blank">
+                <div class="icon-wrapper nlp">💬</div>
+                <span class="status-badge status-beta">Beta</span>
+                <h2 class="card-title">NLP Solutions</h2>
+                <p class="card-description">
+                    Advanced natural language processing including sentiment analysis, entity recognition, text classification, and semantic search.
+                </p>
+                <span class="card-link">View Full Documentation</span>
+            </a>
+
+            <!-- Computer Vision -->
+            <a href="https://your-confluence-url/computer-vision" class="capability-card" target="_blank">
+                <div class="icon-wrapper vision">👁️</div>
+                <span class="status-badge status-active">Active</span>
+                <h2 class="card-title">Computer Vision</h2>
+                <p class="card-description">
+                    Image and video analysis, object detection, segmentation, and visual AI models for real-world applications.
+                </p>
+                <span class="card-link">View Full Documentation</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
