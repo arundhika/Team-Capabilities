@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic AI Systems Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 16px;
+            margin-bottom: 3rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(245, 87, 108, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        /* Sections */
+        section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #f5576c;
+            font-size: 1.8em;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #f093fb;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: #f5576c;
+            font-size: 1.3em;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h4 {
+            color: #666;
+            font-size: 1.1em;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        table th {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        table td {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        table tr:hover {
+            background: #f9f9f9;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+        }
+
+        strong {
+            color: #f5576c;
+        }
+
+        /* Code/Pre blocks */
+        pre {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            border-left: 4px solid #f5576c;
+        }
+
+        /* Cards for phases */
+        .phase-card {
+            background: linear-gradient(135deg, #f093fb15 0%, #f5576c15 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-left: 4px solid #f5576c;
+        }
+
+        .phase-card h4 {
+            color: #f5576c;
+            margin-top: 0;
+        }
+
+        /* Checklist */
+        .checklist {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .checklist label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+            cursor: pointer;
+        }
+
+        .checklist input {
+            margin-right: 0.8rem;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        /* Links */
+        a {
+            color: #f5576c;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            border-radius: 12px;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+
+            table th, table td {
+                padding: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="../../index.html">← Back to Team Capabilities</a>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>🤖 Agentic AI Systems</h1>
+            <p>Autonomous artificial intelligence systems designed to operate independently and make decisions without constant human intervention.</p>
+        </header>
+
+        <!-- Quick Summary -->
+        <section>
+            <h2>📌 Quick Summary</h2>
+            <p>Agentic AI refers to autonomous artificial intelligence systems that perceive their environment, reason about information, and take actions to achieve specific goals through a continuous loop of observation, analysis, and execution. These systems move beyond reactive responses to become proactive decision-makers.</p>
+        </section>
+
+        <!-- What is Agentic AI -->
+        <section>
+            <h2>🎯 What is Agentic AI?</h2>
+            <p>Agentic AI represents a paradigm shift in artificial intelligence where systems move beyond reactive responses to become proactive decision-makers. Unlike traditional AI models that respond to specific prompts, agentic AI systems:</p>
+            <ul>
+                <li>Operate autonomously with minimal human oversight</li>
+                <li>Make independent decisions based on their understanding of context and goals</li>
+                <li>Learn from interactions to improve performance over time</li>
+                <li>Adapt to changing environments without reprogramming</li>
+                <li>Execute multi-step tasks without human intervention at each step</li>
+            </ul>
+
+            <h3>Key Characteristics</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Characteristic</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Autonomy</strong></td>
+                        <td>Operates independently with minimal human oversight</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Perception</strong></td>
+                        <td>Gathers and processes environmental information through sensors, APIs, or data streams</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Reasoning</strong></td>
+                        <td>Makes informed decisions based on data, rules, and learned patterns</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Action</strong></td>
+                        <td>Takes concrete steps to achieve predefined objectives</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Adaptability</strong></td>
+                        <td>Learns and improves from experience and feedback</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Goal-Oriented</strong></td>
+                        <td>Works toward specific objectives without step-by-step instructions</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Real-World Applications -->
+        <section>
+            <h2>🌍 Real-World Applications</h2>
+
+            <h3>Enterprise & Business</h3>
+            <ul>
+                <li><strong>Autonomous Customer Service</strong> - Handles complex customer inquiries without human escalation</li>
+                <li><strong>Document Processing</strong> - Automatically reviews, categorizes, and processes business documents</li>
+                <li><strong>Supply Chain Optimization</strong> - Makes real-time decisions about inventory and logistics</li>
+                <li><strong>Financial Analysis</strong> - Conducts analysis and generates reports autonomously</li>
+                <li><strong>HR Operations</strong> - Manages recruitment, onboarding, and employee queries</li>
+            </ul>
+
+            <h3>Technology & Development</h3>
+            <ul>
+                <li><strong>Code Development</strong> - Writes, tests, and debugs code autonomously</li>
+                <li><strong>Infrastructure Management</strong> - Monitors systems and makes automated fixes</li>
+                <li><strong>Data Analysis</strong> - Discovers insights from large datasets automatically</li>
+                <li><strong>System Optimization</strong> - Continuously improves system performance</li>
+            </ul>
+
+            <h3>Research & Science</h3>
+            <ul>
+                <li><strong>Experiment Design</strong> - Proposes and runs experiments autonomously</li>
+                <li><strong>Data Discovery</strong> - Uncovers patterns and insights in research data</li>
+                <li><strong>Literature Review</strong> - Summarizes and synthesizes research papers</li>
+                <li><strong>Hypothesis Generation</strong> - Creates and tests hypotheses independently</li>
+            </ul>
+
+            <h3>Robotics & IoT</h3>
+            <ul>
+                <li><strong>Autonomous Vehicles</strong> - Navigates and makes driving decisions</li>
+                <li><strong>Warehouse Automation</strong> - Manages inventory and fulfillment</li>
+                <li><strong>Smart Buildings</strong> - Optimizes energy and security automatically</li>
+                <li><strong>Manufacturing</strong> - Controls production processes with minimal oversight</li>
+            </ul>
+        </section>
+
+        <!-- How Agentic AI Works -->
+        <section>
+            <h2>🔄 How Agentic AI Works</h2>
+
+            <h3>The Agent Loop</h3>
+            <pre>PERCEIVE
+  └─ Gather data from environment/APIs/sensors
+
+REASON
+  └─ Analyze data using models and rules
+
+PLAN
+  └─ Determine actions to take
+
+ACT
+  └─ Execute actions in the environment
+
+LEARN
+  └─ Gather feedback and improve
+
+[Loop continues...]</pre>
+
+            <h3>Components of an Agentic System</h3>
+            <ul>
+                <li><strong>Perception Layer</strong> - Data collection from multiple sources, real-time monitoring, API integrations, user input handling</li>
+                <li><strong>Reasoning Engine</strong> - LLM backbone for understanding, rule-based decision logic, pattern matching, context awareness</li>
+                <li><strong>Planning Module</strong> - Multi-step task decomposition, resource allocation, constraint management, risk assessment</li>
+                <li><strong>Execution Layer</strong> - Tool and API integration, action execution, error handling, state management</li>
+                <li><strong>Learning & Feedback</strong> - Performance tracking, feedback incorporation, model updates, continuous improvement</li>
+            </ul>
+        </section>
+
+        <!-- Benefits -->
+        <section>
+            <h2>💡 Benefits of Agentic AI</h2>
+
+            <h3>Operational Efficiency</h3>
+            <ul>
+                <li>24/7 Availability - Works continuously without fatigue</li>
+                <li>Faster Execution - Completes tasks in seconds/minutes vs. hours/days</li>
+                <li>Cost Reduction - Reduces labor costs and operational overhead</li>
+                <li>Scalability - Handles increased workload without proportional cost increases</li>
+            </ul>
+
+            <h3>Consistency & Quality</h3>
+            <ul>
+                <li>Uniform Performance - Delivers consistent results every time</li>
+                <li>Error Reduction - Minimizes human mistakes</li>
+                <li>Compliance - Ensures adherence to rules and policies</li>
+                <li>Standardization - Applies best practices uniformly</li>
+            </ul>
+
+            <h3>Intelligence & Insights</h3>
+            <ul>
+                <li>Data-Driven Decisions - Makes choices based on comprehensive data analysis</li>
+                <li>Pattern Recognition - Identifies trends humans might miss</li>
+                <li>Predictive Analytics - Anticipates future needs and issues</li>
+                <li>Continuous Learning - Improves performance over time</li>
+            </ul>
+
+            <h3>Strategic Value</h3>
+            <ul>
+                <li>Innovation - Enables new business models and services</li>
+                <li>Competitive Advantage - Faster than competitors</li>
+                <li>Risk Mitigation - Identifies and prevents problems proactively</li>
+                <li>Resource Optimization - Better allocation of human and technical resources</li>
+            </ul>
+        </section>
+
+        <!-- Challenges -->
+        <section>
+            <h2>⚠️ Challenges & Considerations</h2>
+
+            <h3>Technical Challenges</h3>
+            <ul>
+                <li>Complexity - Requires sophisticated architecture and integration</li>
+                <li>Data Quality - Depends on clean, relevant training data</li>
+                <li>Model Accuracy - Ensures reasoning quality and reliability</li>
+                <li>Integration Effort - Connecting with existing systems</li>
+                <li>Latency Requirements - Meeting real-time response needs</li>
+            </ul>
+
+            <h3>Operational Challenges</h3>
+            <ul>
+                <li>Monitoring & Control - Tracking agent behavior and performance</li>
+                <li>Error Handling - Managing unexpected situations gracefully</li>
+                <li>Scalability - Maintaining performance at scale</li>
+                <li>Resource Consumption - Balancing capability with computational costs</li>
+            </ul>
+
+            <h3>Safety & Governance</h3>
+            <ul>
+                <li>Alignment - Ensuring agent goals match human values</li>
+                <li>Transparency - Understanding why agents make decisions</li>
+                <li>Control Boundaries - Defining limits of autonomous action</li>
+                <li>Liability - Determining responsibility for agent decisions</li>
+                <li>Security - Protecting against adversarial attacks and manipulation</li>
+            </ul>
+
+            <h3>Ethical Concerns</h3>
+            <ul>
+                <li>Bias & Fairness - Detecting and mitigating algorithmic bias</li>
+                <li>Privacy - Protecting user data and sensitive information</li>
+                <li>Explainability - Making decisions interpretable to humans</li>
+                <li>Job Impact - Managing workforce transition from automation</li>
+            </ul>
+        </section>
+
+        <!-- Technology Stack -->
+        <section>
+            <h2>🛠️ Technology Stack</h2>
+
+            <h3>LLM Backbone</h3>
+            <ul>
+                <li><strong>Foundation Models</strong> - Claude, GPT-4, Gemini, Llama</li>
+                <li><strong>Purpose</strong> - Reasoning, planning, language understanding</li>
+            </ul>
+
+            <h3>Frameworks & Tools</h3>
+            <ul>
+                <li><strong>Agent Frameworks</strong> - LangChain, AutoGPT, CrewAI, Semantic Kernel</li>
+                <li><strong>Orchestration</strong> - Apache Airflow, Prefect, Temporal</li>
+                <li><strong>APIs & Integration</strong> - REST, GraphQL, webhooks</li>
+            </ul>
+
+            <h3>Supporting Technologies</h3>
+            <ul>
+                <li><strong>Vector Databases</strong> - Pinecone, Weaviate, Milvus (for memory)</li>
+                <li><strong>Knowledge Bases</strong> - Confluence, wikis, documentation systems</li>
+                <li><strong>Monitoring</strong> - Datadog, New Relic, custom dashboards</li>
+                <li><strong>Storage</strong> - S3, databases, data lakes</li>
+            </ul>
+        </section>
+
+        <!-- Comparison -->
+        <section>
+            <h2>📊 Comparison: Traditional AI vs. Agentic AI</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Traditional AI</th>
+                        <th>Agentic AI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Interaction Model</td>
+                        <td>Request-response (reactive)</td>
+                        <td>Continuous autonomous operation</td>
+                    </tr>
+                    <tr>
+                        <td>Decision Making</td>
+                        <td>Based on single input</td>
+                        <td>Based on environment and history</td>
+                    </tr>
+                    <tr>
+                        <td>Learning</td>
+                        <td>Offline, batch processes</td>
+                        <td>Online, continuous learning</td>
+                    </tr>
+                    <tr>
+                        <td>Human Involvement</td>
+                        <td>High, frequent interaction</td>
+                        <td>Low, minimal intervention</td>
+                    </tr>
+                    <tr>
+                        <td>Task Scope</td>
+                        <td>Single, well-defined tasks</td>
+                        <td>Complex, multi-step objectives</td>
+                    </tr>
+                    <tr>
+                        <td>Adaptability</td>
+                        <td>Limited to training data</td>
+                        <td>Adapts in real-time</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Getting Started -->
+        <section>
+            <h2>🚀 Getting Started with Agentic AI</h2>
+
+            <div class="phase-card">
+                <h4>Phase 1: Planning & Assessment</h4>
+                <ul>
+                    <li>Define specific use cases and objectives</li>
+                    <li>Identify pain points suitable for agentic solutions</li>
+                    <li>Assess technical readiness</li>
+                    <li>Evaluate resource requirements</li>
+                    <li>Set success metrics and KPIs</li>
+                </ul>
+            </div>
+
+            <div class="phase-card">
+                <h4>Phase 2: Prototype Development</h4>
+                <ul>
+                    <li>Select appropriate LLM backbone</li>
+                    <li>Choose agent framework (LangChain, CrewAI, etc.)</li>
+                    <li>Design agent architecture</li>
+                    <li>Implement core reasoning logic</li>
+                    <li>Integrate necessary tools and APIs</li>
+                    <li>Set up monitoring and logging</li>
+                </ul>
+            </div>
+
+            <div class="phase-card">
+                <h4>Phase 3: Testing & Validation</h4>
+                <ul>
+                    <li>Create comprehensive test scenarios</li>
+                    <li>Validate decision-making quality</li>
+                    <li>Test error handling and edge cases</li>
+                    <li>Evaluate performance metrics</li>
+                    <li>Gather feedback from stakeholders</li>
+                    <li>Refine based on results</li>
+                </ul>
+            </div>
+
+            <div class="phase-card">
+                <h4>Phase 4: Deployment</h4>
+                <ul>
+                    <li>Set up production infrastructure</li>
+                    <li>Implement security measures</li>
+                    <li>Configure monitoring and alerts</li>
+                    <li>Establish control boundaries</li>
+                    <li>Deploy with gradual rollout</li>
+                    <li>Monitor performance continuously</li>
+                </ul>
+            </div>
+
+            <div class="phase-card">
+                <h4>Phase 5: Optimization</h4>
+                <ul>
+                    <li>Analyze performance data</li>
+                    <li>Identify improvement opportunities</li>
+                    <li>Refine reasoning logic</li>
+                    <li>Optimize integrations</li>
+                    <li>Scale as needed</li>
+                    <li>Continue learning and adaptation</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Best Practices -->
+        <section>
+            <h2>📈 Best Practices</h2>
+
+            <h3>Design Principles</h3>
+            <ul>
+                <li><strong>Clear Objectives</strong> - Define specific, measurable goals</li>
+                <li><strong>Bounded Scope</strong> - Limit autonomous decisions to well-defined domains</li>
+                <li><strong>Graceful Degradation</strong> - Fail safely with human fallback options</li>
+                <li><strong>Transparency</strong> - Log and explain decision reasoning</li>
+                <li><strong>Auditability</strong> - Enable tracking of all agent actions</li>
+            </ul>
+
+            <h3>Implementation Guidelines</h3>
+            <ul>
+                <li><strong>Start Small</strong> - Begin with limited scope, expand gradually</li>
+                <li><strong>Monitor Continuously</strong> - Track all agent activities and outcomes</li>
+                <li><strong>Test Thoroughly</strong> - Validate extensively before production</li>
+                <li><strong>Iterate Rapidly</strong> - Improve based on real-world performance</li>
+                <li><strong>Maintain Control</strong> - Always retain ability to override or stop agents</li>
+            </ul>
+
+            <h3>Operational Excellence</h3>
+            <ul>
+                <li><strong>Documentation</strong> - Keep detailed records of agent behavior</li>
+                <li><strong>Training</strong> - Educate team on system capabilities and limitations</li>
+                <li><strong>Governance</strong> - Establish policies for agent decision-making</li>
+                <li><strong>Feedback Loops</strong> - Continuously gather and incorporate feedback</li>
+                <li><strong>Compliance</strong> - Ensure adherence to regulatory requirements</li>
+            </ul>
+        </section>
+
+        <!-- Checklist -->
+        <section>
+            <h2>📋 Checklist: Is Agentic AI Right for Your Use Case?</h2>
+            <div class="checklist">
+                <label>
+                    <input type="checkbox">
+                    Problem involves complex, multi-step workflows
+                </label>
+                <label>
+                    <input type="checkbox">
+                    Manual process is repetitive and time-consuming
+                </label>
+                <label>
+                    <input type="checkbox">
+                    Clear success metrics can be defined
+                </label>
+                <label>
+                    <input type="checkbox">
+                    Autonomous decision-making boundaries are well-defined
+                </label>
+                <label>
+                    <input type="checkbox">
+                    Integration with existing systems is feasible
+                </label>
+                <label>
+                    <input type="checkbox">
+                    Team has capacity to monitor and maintain
+                </label>
+                <label>
+                    <input type="checkbox">
+                    Regulatory/compliance requirements are understood
+                </label>
+                <label>
+                    <input type="checkbox">
+                    Budget and resources are allocated
+                </label>
+            </div>
+            <p><em>If you check most boxes, Agentic AI might be the right solution!</em></p>
+        </section>
+
+        <!-- Training -->
+        <section>
+            <h2>🎓 Training & Certification</h2>
+
+            <h3>Available Courses</h3>
+            <ul>
+                <li><strong>Level 1: Fundamentals</strong> - Understanding agentic systems (4 hours)</li>
+                <li><strong>Level 2: Implementation</strong> - Building agentic applications (8 hours)</li>
+                <li><strong>Level 3: Advanced</strong> - Multi-agent systems and optimization (12 hours)</li>
+            </ul>
+
+            <p><strong>Certification:</strong> Complete the Level 3 course to earn your Agentic AI Practitioner certification.</p>
+        </section>
+
+        <!-- Resources -->
+        <section>
+            <h2>📚 Resources & Documentation</h2>
+
+            <h3>Internal Resources</h3>
+            <ul>
+                <li>LLM Evaluation Metrics</li>
+                <li>Knowledge Composition Guide</li>
+                <li>Testing Best Practices</li>
+                <li>Implementation Patterns</li>
+            </ul>
+
+            <h3>External Learning</h3>
+            <ul>
+                <li><a href="https://docs.langchain.com/" target="_blank">LangChain Documentation</a></li>
+                <li><a href="https://crewai.com/" target="_blank">CrewAI Framework</a></li>
+                <li><a href="https://platform.openai.com/docs/guides/gpt" target="_blank">OpenAI Agent Guide</a></li>
+                <li><a href="https://www.anthropic.com/research" target="_blank">Anthropic Research</a></li>
+            </ul>
+
+            <h3>Key Papers & Articles</h3>
+            <ul>
+                <li>"Agents as a Planning Strategy" - Research on agent-based planning</li>
+                <li>"Reasoning with Language Models" - Deep dive into LLM reasoning</li>
+                <li>"Multi-Agent Systems" - Foundations and applications</li>
+            </ul>
+        </section>
+
+        <!-- Support -->
+        <section>
+            <h2>🤝 Support & Contact</h2>
+            <p><strong>Questions?</strong></p>
+            <ul>
+                <li>Slack Channel: #agentic-ai-team</li>
+                <li>Email: agentic-ai@company.com</li>
+                <li>Office Hours: Every Tuesday, 10 AM - 12 PM</li>
+            </ul>
+
+            <h3>Related Capabilities</h3>
+            <ul>
+                <li>LLM Evaluation Metrics - Testing and validating agents</li>
+                <li>Knowledge Composition - Building agent knowledge bases</li>
+                <li>Robustness Testing - Ensuring reliability</li>
+            </ul>
+        </section>
+
+        <!-- Version History -->
+        <section>
+            <h2>📝 Version History</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Version</th>
+                        <th>Date</th>
+                        <th>Changes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.0</td>
+                        <td>2025-01-15</td>
+                        <td>Initial documentation</td>
+                    </tr>
+                    <tr>
+                        <td>1.1</td>
+                        <td>2025-01-20</td>
+                        <td>Added best practices section</td>
+                    </tr>
+                    <tr>
+                        <td>1.2</td>
+                        <td>2025-01-25</td>
+                        <td>Updated technology stack</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Last Updated:</strong> January 2025</p>
+        <p><strong>Maintained By:</strong> Agentic AI Team</p>
+        <p><strong>Status:</strong> Active & Current</p>
+    </footer>
+</body>
+</html>
